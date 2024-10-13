@@ -1,6 +1,14 @@
 {
   "version": "0.2.0",
   "configurations": [
+  
+    {
+      "type": "java",
+      "name": "Analysis",
+      "request": "launch",
+      "mainClass": "Analysis",
+      "projectName": "Algorithms-for-lunch_9ae470c1"
+    },
     {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",

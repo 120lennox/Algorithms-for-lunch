@@ -6,7 +6,7 @@ public class Analysis{
             sum ++;
         }
 
-        System.out.println("executed " + sum + "times");
+        System.out.println("executed " + sum + " times");
     }
 
     public static void main(String args[]){
