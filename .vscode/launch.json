@@ -1,7 +1,13 @@
 {
   "version": "0.2.0",
   "configurations": [
-  
+    {
+      "type": "java",
+      "name": "Generics",
+      "request": "launch",
+      "mainClass": "java_ADT.Generics",
+      "projectName": "Algorithms-for-lunch_9ae470c1"
+    },
     {
       "type": "java",
       "name": "Analysis",
