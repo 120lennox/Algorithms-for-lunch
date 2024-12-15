@@ -7,6 +7,7 @@ void algorithm(long n){
             cout<<i<<" \n";
             n = n/i;
         }
+      cout<<i<<" \n";  
     }
 }
 
