@@ -6,13 +6,13 @@ void algorithm(long n){
         while (n % i == 0){
             cout<<i<<" \n";
             n = n/i;
-        }
-      cout<<i<<" \n";  
+        } 
+        cout<<i++;
     }
 }
 
 int main(){
-    int num = 1000;
+    int num = 193;
     algorithm(num);
     return 0;
 }
