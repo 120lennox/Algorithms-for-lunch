@@ -23,7 +23,10 @@ public class AList<E> implements List<E> {
     }
 
     public void insert(E item){
-        
+        assert listSize < maxSize : "List capacity exceeded";
+        for (int i = listSize; i > currentPosition; i--){
+            
+        }
     }
 
 }
