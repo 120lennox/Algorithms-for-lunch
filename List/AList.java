@@ -24,9 +24,13 @@ public class AList<E> implements List<E> {
 
     public void insert(E item){
         assert listSize < maxSize : "List capacity exceeded";
+
+        // shifting elements to the right to make room
         for (int i = listSize; i > currentPosition; i--){
-            
+            listArray[i] = listArray[i - 1];
         }
+        listArray[currentPosition] = item;
+        listSize++;
     }
 
 }
