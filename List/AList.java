@@ -27,10 +27,17 @@ public class AList<E> implements List<E> {
 
         // shifting elements to the right to make room
         for (int i = listSize; i > currentPosition; i--){
-            listArray[i] = listArray[i - 1];
+            listArray[i] = listArray[i - 1]; // copies an element on position i-1 to position i. process continues untill i equals currentPosition
         }
         listArray[currentPosition] = item;
         listSize++;
+    }
+
+    public void append(E item){
+        assert listSize < maxSize : "List capacity exceeded";
+
+        // adds element at the end of the list
+        listArray[listSize++] = item;
     }
 
 }
