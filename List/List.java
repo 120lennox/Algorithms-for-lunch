@@ -27,7 +27,7 @@ public interface List<E>{
     public int length();
 
     // returns the position of the current item
-    public int currentPosition();
+    public int currentPos();
 
     //sets the current position
     public void moveToPos(int pos);

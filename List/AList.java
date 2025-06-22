@@ -40,4 +40,35 @@ public class AList<E> implements List<E> {
         listArray[listSize++] = item;
     }
 
+    public E remove(){
+        // if there is no element on current position, return null
+        if ((currentPosition < 0) || (currentPosition >= listSize)) return null;
+
+        E item = listArray[currentPosition]; // copy the element at the current position
+
+        for (int i = currentPosition; i < listSize - 1; i++){
+            listArray[i] = listArray[i + 1]; // copies the next element to previous position
+        }
+        listSize--;
+        return item;
+    }
+
+    public void moveToStart(){currentPosition = 0; }
+
+    public void moveToEnd(){currentPosition = listSize; }
+
+    public void prev(){
+        if (currentPosition != 0) currentPosition--;
+    }
+
+    public void next(){
+        if (currentPosition != listSize) currentPosition++;
+    }
+
+    public int length(){
+        return listSize;
+    }
+
+    public int 
+
 }
