@@ -35,3 +35,4 @@ public interface List<E>{
     // return an element on the current position
     public E getValue();
 }
+
