@@ -52,5 +52,20 @@ public class LList <E> implements List <E> {
         return item;
     }
 
-    
+    public void moveToStart(){
+        current = head;
+    }
+
+    public void moveToEnd(){
+        current = tail;
+    }
+
+    public void prev(){
+        if (current == head) return ;
+
+        Link<E> temp = head;
+
+        while (temp.next() != current) {temp = temp.next(); }
+        current = temp;
+    }
 }
