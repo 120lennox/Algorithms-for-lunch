@@ -79,5 +79,15 @@ public class LList <E> implements List <E> {
     public int length(){
         return count;
     }
+
+    public int currentPos(){
+        Link <E> temp = head;
+        int i;
+        for(i=0; current != temp; i++){
+            temp = temp.next();
+        }
+        return i;
+    }
+
     
 }
