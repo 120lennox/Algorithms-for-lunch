@@ -17,4 +17,14 @@ public class LList <E> implements List <E> {
         count = 0;
     }
     
+    // remove all elements in a linked list
+    public void clear(){
+        head.setNext(null); // drop access to all links
+        current = tail = head = new Link<E>(null); // create a new link head
+        count = 0;
+    }
+
+    public void append (E item){
+        
+    }
 }
