@@ -1,4 +1,3 @@
-
 public class AList<E> implements List<E> {
     private static final int defaultSize = 10;
     private int maxSize;
@@ -69,6 +68,18 @@ public class AList<E> implements List<E> {
         return listSize;
     }
 
-    public int 
+    public int currentPos(){
+        return currentPosition;
+    }
 
+    // jumping straight to certain position
+    public void moveToPos(int pos){
+        assert (pos >= 0) && (pos <= listSize) : "Pos out of range";
+        currentPosition = pos;
+    }
+
+    public E  getValue(){
+        assert (currentPosition >= 0) && (currentPosition <= listSize) : "No current element";
+        return listArray[currentPosition];
+    }
 }
