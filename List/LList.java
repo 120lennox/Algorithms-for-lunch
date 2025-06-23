@@ -89,5 +89,16 @@ public class LList <E> implements List <E> {
         return i;
     }
 
-    
+    public void moveToPos(int pos){
+        assert (pos >= 0) && (pos <= count): "Position out of range";
+        current = head;
+        for (int i = 0; i < pos; i++){
+            current = current.next();
+        }
+    }
+
+    public E getValue(){
+        if (current.next() == null) return null;
+        return current.next().element();
+    }
 }
