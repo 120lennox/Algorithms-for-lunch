@@ -25,6 +25,32 @@ public class LList <E> implements List <E> {
     }
 
     public void append (E item){
-        
+        tail = tail.setNext(new Link<E>(item, null)); // add an item on the tail and set it to point to null
+        count++;
     }
+
+    public void insert(E item){
+        current.setNext(new Link<E>(item, current.next())); // insert an item at the current position
+        // move the current pointer to the newly inserted item
+        if (tail == current){ 
+            current.next(); 
+        }
+        count++;
+    }
+
+    public E remove(){
+        // if current position has nothing, dont remove
+        if (current == null){
+            return null;
+        }
+
+        E item = current.next().element();
+
+        if (tail == current.next()) tail = current;
+        current.setNext(current.next().next()); // set the current item to point to the next item
+        count--;
+        return item;
+    }
+
+    
 }
