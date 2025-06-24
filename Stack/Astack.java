@@ -33,5 +33,12 @@ public class Astack<E> implements Stack<E> {
         return listArray[top--];
     }
 
-    public 
+    public E topValue(){
+        assert top != 0: "Stack is empty";
+        return listArray[top - 1];
+    }
+
+    public int length(){
+        return top;
+    }
 }
