@@ -10,4 +10,5 @@ public interface Stack <E>{
     public E topValue();
 
     public int length();
+
 }
