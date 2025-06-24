@@ -1,3 +1,5 @@
+
+
 public class Link <E> {
     private E element; // value in a linked list
     private Link <E> next; // reference to the next node in the list
