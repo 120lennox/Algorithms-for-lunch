@@ -4,8 +4,8 @@
 
 public class Run {
     public static void main(String[] args) {
-        AList array_list1 = new AList<>();
-        LList linked_list = new LList<>();
+        AList<String> array_list1 = new AList<>();
+        LList<Integer> linked_list = new LList<>();
 
         // array_list1.insert("lennox");
         // array_list1.insert("Mountain");
