@@ -1,4 +1,4 @@
-package List;
+package Lists;
 
 public class Link <E> {
     private E element; // value in a linked list

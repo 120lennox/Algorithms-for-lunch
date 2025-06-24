@@ -1,3 +1,4 @@
+package Lists;
 public class AList<E> implements List<E> {
     private static final int defaultSize = 10;
     private int maxSize;
