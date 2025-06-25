@@ -1,8 +1,8 @@
 package Stack;
 import Lists.Link;
 
-public class LStack<E> implements Stack {
-    private Link<E> top;
+public class LStack<E> implements Stack<E> {
+    public Link<E> top;
     private int size;
 
     public LStack(){
@@ -26,7 +26,7 @@ public class LStack<E> implements Stack {
 
     public E pop(){
         assert top != null: "Stack is empt";
-        E item = top.element()
+        E item = top.element();
         top = top.next();
         size --;
         return item;

@@ -1,16 +1,16 @@
 package Lists;
 
 public class Link <E> {
-    private E element; // value in a linked list
-    private Link <E> next; // reference to the next node in the list
+    public E element; // value in a linked list
+    public Link <E> next; // reference to the next node in the list
 
     //constructors
-    Link(E item, Link<E> nextval ){
+    public Link(E item, Link<E> nextval ){
         element = item;
         next = nextval;
     }
 
-    Link (Link<E> nextval){
+    public Link (Link<E> nextval){
         next = nextval;
     }
 
