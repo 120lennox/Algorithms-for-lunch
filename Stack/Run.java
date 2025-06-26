@@ -2,7 +2,7 @@ package Stack;
 public class Run {
     public static void main(String[] args) {
         Astack<String> stack = new Astack<>();
-        LStack<Integer> stack2 = new LStack<>();
+        // LStack<Integer> stack2 = new LStack<>();
 
         stack.push("Lennox");
         stack.push("Regina");
@@ -11,9 +11,9 @@ public class Run {
         stack.push("Sosobina");
         stack.push("Nsanje");
 
-        stack2.push(1);
-        stack2.push(2);
-        System.out.println("Linked stack top element " + stack2.topValue());
+        // stack2.push(1);
+        // stack2.push(2);
+        // System.out.println("Linked stack top element " + stack2.topValue());
 
         // printing top value of the stack
         System.out.println("Top value of the stack is " + stack.topValue());
@@ -24,5 +24,7 @@ public class Run {
             System.out.println("Element on position " + (stack.length() - 1) + " is " + stack.pop());
             System.out.println();
         }
+
+        
     }
 }

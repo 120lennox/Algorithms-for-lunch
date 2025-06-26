@@ -66,7 +66,9 @@ public class LList <E> implements List <E> {
         Link<E> temp = head;
 
         /* keep traversing in the linked list untill we find a node that points to the current node */
-        while (temp.next() != current) {temp = temp.next(); } 
+        while (temp.next() != current)
+            temp = temp.next();  
+
         current = temp;
     }
 
