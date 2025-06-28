@@ -17,10 +17,22 @@ public class MaxHeap<E extends Comparable<? super E>> {
         return count;
     }
 
+    // following the theory that a leaves are found at the other half of the array. 
+    // we con say that if the pos on the other half and we are still within array bounds
     public boolean isLeaf(int pos ){
-        return (pos >= count/2) && (pos < count);
+        return (pos >= count/2) && (pos < count); 
     }
 
-    
+    public int leftChild(int pos){
+        assert pos < (count - 1)/2 : "position has no letft child";
+        return 2 * pos + 1;
+    }
+
+    public int rightChild(int pos){
+        assert pos < (count - 1)/2 : "position has no letft child";
+        return 2 * pos + 2;
+    }
+
+
 
 }
