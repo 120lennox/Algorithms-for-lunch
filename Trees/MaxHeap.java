@@ -54,4 +54,12 @@ public class MaxHeap<E extends Comparable<? super E>> {
             current = parent(current);
         }
     }
+
+    // heapify contents of the heap
+    public void buildheap(){
+        for (int i = count/2-1; i >=0; i--) siftdown(i);
+    }
+
+    private void siftdown(int pos){}
+    
 }
