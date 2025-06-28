@@ -23,6 +23,12 @@ public class MaxHeap<E extends Comparable<? super E>> {
         return (pos >= count/2) && (pos < count); 
     }
 
+    private void swap(int i, int j) {
+        E temp = heap[i];
+        heap[i] = heap[j];
+        heap[j] = temp;
+    }
+
     public int leftChild(int pos){
         assert pos < (count - 1)/2 : "position has no letft child"; // (count - 1)/2 is an internal node
         return 2 * pos + 1;
@@ -44,7 +50,7 @@ public class MaxHeap<E extends Comparable<? super E>> {
         heap[current] = item;
         
         while((current != 0) && heap[current].compareTo(heap[parent(current)]) > 0){
-            DSutil.swap(heap, current, parent(current));
+            swap(current, parent(current));
             current = parent(current);
         }
     }
