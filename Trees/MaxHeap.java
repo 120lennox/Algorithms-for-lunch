@@ -57,9 +57,20 @@ public class MaxHeap<E extends Comparable<? super E>> {
 
     // heapify contents of the heap
     public void buildheap(){
-        for (int i = count/2-1; i >=0; i--) siftdown(i);
+        for (int i = count/2-1; i >=0; i--) siftdown(i); // starting on the last non-leaf node (half of the array)
     }
 
-    private void siftdown(int pos){}
-    
+    private void siftdown(int pos){
+        assert (pos >= 0) && (pos < count): "illegal heap position"; 
+        while (!isLeaf(pos)){
+            int j = leftChild(pos);
+            if ((j < (count - 1)) && heap[j].compareTo(heap[j + 1]) > 0){
+                j++;
+            }
+            if (heap[pos].compareTo(heap[j]) > 0) return;
+            swap(pos, j);
+            pos = j;
+        }
+    }
+
 }
