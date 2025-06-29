@@ -72,4 +72,8 @@ public class MaxHeap<E extends Comparable<? super E>> {
             pos = j;
         }
     }
+
+    public E remove(){
+        
+    }
 }
