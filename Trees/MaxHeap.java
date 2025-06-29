@@ -64,13 +64,12 @@ public class MaxHeap<E extends Comparable<? super E>> {
         assert (pos >= 0) && (pos < count): "illegal heap position"; 
         while (!isLeaf(pos)){
             int j = leftChild(pos);
-            if ((j < (count - 1)) && heap[j].compareTo(heap[j + 1]) > 0){
-                j++;
+            if ((j < (count - 1)) && heap[j].compareTo(heap[j + 1]) > 0){ // if the left child is greter than the right child
+                j++; //switch to the right child
             }
             if (heap[pos].compareTo(heap[j]) > 0) return;
             swap(pos, j);
             pos = j;
         }
     }
-
 }
