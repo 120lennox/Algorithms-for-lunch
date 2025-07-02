@@ -1,7 +1,13 @@
 package Sorting;
 
 public class InsertionSort {
-    public void swap()
+    static <E extends Comparable <? super E>>
+    void swap(int i , int j, E[] array) {
+        E temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    
     static <E extends Comparable <? super E>>
     void insertionSort(E[] arr) {
         int length = arr.length;
